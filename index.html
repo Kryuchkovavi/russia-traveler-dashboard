@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Путешественник по России</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+
+    <script type="module" src="main.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__logo">
+            <span class="header__logo-icon">✦</span>
+            <span>Путешественник</span>
+        </div>
+
+        <div class="header__subtitle">
+            Россия рядом
+        </div>
+    </header>
+
+    <main class="dashboard">
+
+        <section class="hero">
+            <div class="hero__content">
+                <p class="hero__label">ПАНЕЛЬ ПУТЕШЕСТВЕННИКА</p>
+
+                <h1 class="hero__title">
+                    Открой Россию
+                    <span>по-новому</span>
+                </h1>
+
+                <p class="hero__description">
+                    Собери свою персональную панель для путешествий:
+                    погода, маршруты, бюджет и полезные советы.
+                </p>
+            </div>
+        </section>
+
+        <section class="controls">
+            <h2>Добавить виджет</h2>
+
+            <div class="controls__buttons">
+                <button type="button" data-widget="weather">
+                    Погода
+                </button>
+
+                <button type="button" data-widget="place">
+                    Место
+                </button>
+
+                <button type="button" data-widget="todo">
+                    Список вещей
+                </button>
+
+                <button type="button" data-widget="route">
+                    Маршрут
+                </button>
+
+                <button type="button" data-widget="budget">
+                    Бюджет
+                </button>
+
+                <button type="button" data-widget="advice">
+                    ✦ Совет
+                </button>
+            </div>
+        </section>
+
+        <section
+            class="widgets"
+            id="widgets"
+            aria-label="Виджеты путешественника">
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Путешествуй. Исследуй. Открывай Россию.</p>
+    </footer>
+
+</body>
+</html>
