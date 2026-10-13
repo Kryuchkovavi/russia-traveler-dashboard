@@ -92,6 +92,7 @@ export default class ToDoWidget extends UIComponent {
                 "widget__item--completed",
                 event.target.checked
             );
+        });
 
         this.addEventListener(list, "click", (event) => {
             if (!event.target.classList.contains("widget__item-delete")) {
@@ -108,7 +109,6 @@ export default class ToDoWidget extends UIComponent {
             this.items.splice(index, 1);
             this.updateList(list);
         });
-});
 
         this.addEventListener(addButton, "click", () => {
             this.addItem(input, list);

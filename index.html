@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/components.css">
 
-    <script type="module" src="main.js"></script>
+    <script src="app.bundle.js" defer></script>
 </head>
 
 <body>
@@ -20,8 +20,10 @@
             <span>Путешественник</span>
         </div>
 
-        <div class="header__subtitle">
-            Россия рядом
+        <div class="header__account">
+            <label for="user-name">Как к вам обращаться?</label>
+            <input id="user-name" type="text" maxlength="40" placeholder="Ваше имя" autocomplete="given-name">
+            <strong id="greeting">Добро пожаловать!</strong>
         </div>
     </header>
 
@@ -40,6 +42,21 @@
                     Собери свою персональную панель для путешествий:
                     погода, маршруты, бюджет и полезные советы.
                 </p>
+            </div>
+        </section>
+
+        <section class="city-tools" aria-label="Поиск и избранное">
+            <div class="city-tools__search">
+                <label for="global-city">Ваш город путешествия</label>
+                <div class="city-tools__row">
+                    <input id="global-city" type="search" placeholder="Например, Казань">
+                    <button type="button" id="save-city">Сохранить город</button>
+                </div>
+                <p class="city-tools__hint">Имя, избранные города и открытые виджеты сохраняются в этом браузере.</p>
+            </div>
+            <div class="city-tools__favorites">
+                <h2>Избранные города</h2>
+                <div id="favorite-cities" class="favorite-cities"><span>Пока пусто</span></div>
             </div>
         </section>
 
